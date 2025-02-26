@@ -8,10 +8,9 @@ app.use(json());
 
 app.use('/auth', authRoutes);
 app.use('/users', usersRoutes)
-// app.get('/users', (req: Request, res: Response) => {
-//     console.log("test");
-//     res.send("It work!");
-// })
+app.get('/', (req: Request, res: Response) => {
+    res.send("It work!");
+})
 
 
 const PORT = process.env.PORT || 8686;
